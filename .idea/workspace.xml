@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4fd71d5d-8512-4159-841a-8acb385ce63d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1XO7Tjx3AJ4wwLxRLWNhS1O8CnM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Music" />
+      <recent name="$PROJECT_DIR$/Sprites" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Music" />
+      <recent name="$PROJECT_DIR$/Sprites" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.Practice">
+    <configuration name="EnemyRandom" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SpaceSurvive" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EnemyRandom.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Fractions" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SpaceSurvive" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Fractions.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Practice" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SpaceSurvive" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Practice.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Sprites" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SpaceSurvive" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sprites.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Practice" />
+        <item itemvalue="Python.EnemyRandom" />
+        <item itemvalue="Python.Sprites" />
+        <item itemvalue="Python.Fractions" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4fd71d5d-8512-4159-841a-8acb385ce63d" name="Default Changelist" comment="" />
+      <created>1580905296854</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580905296854</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="278" y="32" width="804" height="674" key="#Notifications" timestamp="1580906007673">
+      <screen x="0" y="0" width="1366" height="742" />
+    </state>
+    <state x="278" y="32" width="804" height="674" key="#Notifications/0.0.1366.742@0.0.1366.742" timestamp="1580906007673" />
+    <state x="389" y="177" width="738" height="387" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581341820348">
+      <screen x="0" y="0" width="1366" height="742" />
+    </state>
+    <state x="389" y="177" width="738" height="387" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.742@0.0.1366.742" timestamp="1581341820348" />
+    <state x="427" y="115" width="505" height="510" key="FileChooserDialogImpl" timestamp="1581688310483">
+      <screen x="0" y="0" width="1366" height="742" />
+    </state>
+    <state x="427" y="115" width="505" height="510" key="FileChooserDialogImpl/0.0.1366.742@0.0.1366.742" timestamp="1581688310483" />
+    <state x="472" y="289" key="Github.CreateGistDialog" timestamp="1581697752936">
+      <screen x="0" y="0" width="1366" height="742" />
+    </state>
+    <state x="472" y="289" key="Github.CreateGistDialog/0.0.1366.742@0.0.1366.742" timestamp="1581697752936" />
+    <state width="1343" height="177" key="GridCell.Tab.0.bottom" timestamp="1581688312437">
+      <screen x="0" y="0" width="1366" height="742" />
+    </state>
+    <state width="1343" height="177" key="GridCell.Tab.0.bottom/0.0.1366.742@0.0.1366.742" timestamp="1581688312437" />
+    <state width="1343" height="177" key="GridCell.Tab.0.center" timestamp="1581688312436">
+      <screen x="0" y="0" width="1366" height="742" />
+    </state>
+    <state width="1343" height="177" key="GridCell.Tab.0.center/0.0.1366.742@0.0.1366.742" timestamp="1581688312436" />
+    <state width="1343" height="177" key="GridCell.Tab.0.left" timestamp="1581688312436">
+      <screen x="0" y="0" width="1366" height="742" />
+    </state>
+    <state width="1343" height="177" key="GridCell.Tab.0.left/0.0.1366.742@0.0.1366.742" timestamp="1581688312436" />
+    <state width="1343" height="177" key="GridCell.Tab.0.right" timestamp="1581688312437">
+      <screen x="0" y="0" width="1366" height="742" />
+    </state>
+    <state width="1343" height="177" key="GridCell.Tab.0.right/0.0.1366.742@0.0.1366.742" timestamp="1581688312437" />
+    <state width="1343" height="220" key="GridCell.Tab.1.bottom" timestamp="1581000813406">
+      <screen x="0" y="0" width="1366" height="742" />
+    </state>
+    <state width="1343" height="220" key="GridCell.Tab.1.bottom/0.0.1366.742@0.0.1366.742" timestamp="1581000813406" />
+    <state width="1343" height="220" key="GridCell.Tab.1.center" timestamp="1581000813406">
+      <screen x="0" y="0" width="1366" height="742" />
+    </state>
+    <state width="1343" height="220" key="GridCell.Tab.1.center/0.0.1366.742@0.0.1366.742" timestamp="1581000813406" />
+    <state width="1343" height="220" key="GridCell.Tab.1.left" timestamp="1581000813405">
+      <screen x="0" y="0" width="1366" height="742" />
+    </state>
+    <state width="1343" height="220" key="GridCell.Tab.1.left/0.0.1366.742@0.0.1366.742" timestamp="1581000813405" />
+    <state width="1343" height="220" key="GridCell.Tab.1.right" timestamp="1581000813406">
+      <screen x="0" y="0" width="1366" height="742" />
+    </state>
+    <state width="1343" height="220" key="GridCell.Tab.1.right/0.0.1366.742@0.0.1366.742" timestamp="1581000813406" />
+    <state x="172" y="7" key="SettingsEditor" timestamp="1581083572127">
+      <screen x="0" y="0" width="1366" height="742" />
+    </state>
+    <state x="172" y="7" key="SettingsEditor/0.0.1366.742@0.0.1366.742" timestamp="1581083572127" />
+    <state x="339" y="198" key="com.intellij.ide.util.TipDialog" timestamp="1581687142856">
+      <screen x="0" y="0" width="1366" height="742" />
+    </state>
+    <state x="339" y="198" key="com.intellij.ide.util.TipDialog/0.0.1366.742@0.0.1366.742" timestamp="1581687142856" />
+  </component>
+</project>
