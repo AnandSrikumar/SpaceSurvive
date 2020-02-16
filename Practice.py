@@ -364,7 +364,7 @@ def draw_enemy_platform():
 def collision_detection_bullet(en_rect, e_list):
     global bullet_list, score, explosions
     for bullet in bullet_list:
-        bul_rect = pygame.Rect(bullet[0]-bul_wid, bullet[1]-bul_hie, bul_wid, bul_hie)
+        bul_rect = pygame.Rect(bullet[0]-bul_wid/2, bullet[1]-bul_hie/2, bul_wid/2, bul_hie/2)
         if type(bul_rect) == pygame.Rect and bul_rect.colliderect(en_rect):
             e_list[6] -= 25
             bullet[0] = -2000
