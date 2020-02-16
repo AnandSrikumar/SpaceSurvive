@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fd71d5d-8512-4159-841a-8acb385ce63d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Sprites/Bullets/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sprites/Bullets/2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/Practice.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sprites.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sprites.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sprites/Playership Animations/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Sprites/Playership Animations/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sprites/Playership Animations/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Sprites/Playership Animations/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sprites/Playership Animations/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Sprites/Playership Animations/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sprites/Playership Animations/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Sprites/Playership Animations/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sprites/Playership Animations/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Sprites/Playership Animations/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sprites/dark1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Sprites/dark1.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,22 +170,22 @@
       <screen x="0" y="0" width="1366" height="742" />
     </state>
     <state x="472" y="289" key="Github.CreateGistDialog/0.0.1366.742@0.0.1366.742" timestamp="1581697752936" />
-    <state width="1343" height="177" key="GridCell.Tab.0.bottom" timestamp="1581835694945">
+    <state width="1343" height="177" key="GridCell.Tab.0.bottom" timestamp="1581849272563">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
-    <state width="1343" height="177" key="GridCell.Tab.0.bottom/0.0.1366.742@0.0.1366.742" timestamp="1581835694945" />
-    <state width="1343" height="177" key="GridCell.Tab.0.center" timestamp="1581835694945">
+    <state width="1343" height="177" key="GridCell.Tab.0.bottom/0.0.1366.742@0.0.1366.742" timestamp="1581849272563" />
+    <state width="1343" height="177" key="GridCell.Tab.0.center" timestamp="1581849272562">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
-    <state width="1343" height="177" key="GridCell.Tab.0.center/0.0.1366.742@0.0.1366.742" timestamp="1581835694945" />
-    <state width="1343" height="177" key="GridCell.Tab.0.left" timestamp="1581835694945">
+    <state width="1343" height="177" key="GridCell.Tab.0.center/0.0.1366.742@0.0.1366.742" timestamp="1581849272562" />
+    <state width="1343" height="177" key="GridCell.Tab.0.left" timestamp="1581849272562">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
-    <state width="1343" height="177" key="GridCell.Tab.0.left/0.0.1366.742@0.0.1366.742" timestamp="1581835694945" />
-    <state width="1343" height="177" key="GridCell.Tab.0.right" timestamp="1581835694945">
+    <state width="1343" height="177" key="GridCell.Tab.0.left/0.0.1366.742@0.0.1366.742" timestamp="1581849272562" />
+    <state width="1343" height="177" key="GridCell.Tab.0.right" timestamp="1581849272562">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
-    <state width="1343" height="177" key="GridCell.Tab.0.right/0.0.1366.742@0.0.1366.742" timestamp="1581835694945" />
+    <state width="1343" height="177" key="GridCell.Tab.0.right/0.0.1366.742@0.0.1366.742" timestamp="1581849272562" />
     <state width="1343" height="220" key="GridCell.Tab.1.bottom" timestamp="1581000813406">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
@@ -215,9 +206,9 @@
       <screen x="0" y="0" width="1366" height="742" />
     </state>
     <state x="172" y="7" key="SettingsEditor/0.0.1366.742@0.0.1366.742" timestamp="1581083572127" />
-    <state x="339" y="198" key="com.intellij.ide.util.TipDialog" timestamp="1581832452480">
+    <state x="339" y="198" key="com.intellij.ide.util.TipDialog" timestamp="1581849208109">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
-    <state x="339" y="198" key="com.intellij.ide.util.TipDialog/0.0.1366.742@0.0.1366.742" timestamp="1581832452480" />
+    <state x="339" y="198" key="com.intellij.ide.util.TipDialog/0.0.1366.742@0.0.1366.742" timestamp="1581849208109" />
   </component>
 </project>
