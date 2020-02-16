@@ -16,3 +16,7 @@ Note:
 This game is under development, that is why 2-3 files are present but unused, they will; be used in future.
 Im going to make this game as platformer game which allows you to move in any directions by avoiding obstacles and killing enemies. Right now, you will be moving in a single screen while enmies attack you and you have to kill enemies, no obstacles currently.
 
+Video of the gameplay:
+https://youtu.be/CDCWt7C4gjY
+
+The video recorder is buggy, that is why audio is lagging!
