@@ -1,13 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4fd71d5d-8512-4159-841a-8acb385ce63d" name="Default Changelist" comment="" />
+    <list default="true" id="4fd71d5d-8512-4159-841a-8acb385ce63d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Sprites/Bullets/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprites/Bullets/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/Practice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sprites.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Playership Animations/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Sprites/Playership Animations/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Playership Animations/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Sprites/Playership Animations/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Playership Animations/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Sprites/Playership Animations/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Playership Animations/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Sprites/Playership Animations/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Playership Animations/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Sprites/Playership Animations/5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/dark1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Sprites/dark1.png" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1XO7Tjx3AJ4wwLxRLWNhS1O8CnM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -15,18 +38,20 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Sprites/Bullets" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Music" />
       <recent name="$PROJECT_DIR$/Sprites" />
+      <recent name="$PROJECT_DIR$/Music" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Music" />
+      <recent name="$PROJECT_DIR$/Sprites/Bullets" />
       <recent name="$PROJECT_DIR$/Sprites" />
+      <recent name="$PROJECT_DIR$/Explosions/PlayerExplosion" />
+      <recent name="$PROJECT_DIR$/Sprites/Playership Animations" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -146,30 +171,30 @@
       <screen x="0" y="0" width="1366" height="742" />
     </state>
     <state x="389" y="177" width="738" height="387" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.742@0.0.1366.742" timestamp="1581341820348" />
-    <state x="427" y="115" width="505" height="510" key="FileChooserDialogImpl" timestamp="1581688310483">
+    <state x="427" y="115" width="505" height="510" key="FileChooserDialogImpl" timestamp="1581718261059">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
-    <state x="427" y="115" width="505" height="510" key="FileChooserDialogImpl/0.0.1366.742@0.0.1366.742" timestamp="1581688310483" />
+    <state x="427" y="115" width="505" height="510" key="FileChooserDialogImpl/0.0.1366.742@0.0.1366.742" timestamp="1581718261059" />
     <state x="472" y="289" key="Github.CreateGistDialog" timestamp="1581697752936">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
     <state x="472" y="289" key="Github.CreateGistDialog/0.0.1366.742@0.0.1366.742" timestamp="1581697752936" />
-    <state width="1343" height="177" key="GridCell.Tab.0.bottom" timestamp="1581688312437">
+    <state width="1343" height="177" key="GridCell.Tab.0.bottom" timestamp="1581835694945">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
-    <state width="1343" height="177" key="GridCell.Tab.0.bottom/0.0.1366.742@0.0.1366.742" timestamp="1581688312437" />
-    <state width="1343" height="177" key="GridCell.Tab.0.center" timestamp="1581688312436">
+    <state width="1343" height="177" key="GridCell.Tab.0.bottom/0.0.1366.742@0.0.1366.742" timestamp="1581835694945" />
+    <state width="1343" height="177" key="GridCell.Tab.0.center" timestamp="1581835694945">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
-    <state width="1343" height="177" key="GridCell.Tab.0.center/0.0.1366.742@0.0.1366.742" timestamp="1581688312436" />
-    <state width="1343" height="177" key="GridCell.Tab.0.left" timestamp="1581688312436">
+    <state width="1343" height="177" key="GridCell.Tab.0.center/0.0.1366.742@0.0.1366.742" timestamp="1581835694945" />
+    <state width="1343" height="177" key="GridCell.Tab.0.left" timestamp="1581835694945">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
-    <state width="1343" height="177" key="GridCell.Tab.0.left/0.0.1366.742@0.0.1366.742" timestamp="1581688312436" />
-    <state width="1343" height="177" key="GridCell.Tab.0.right" timestamp="1581688312437">
+    <state width="1343" height="177" key="GridCell.Tab.0.left/0.0.1366.742@0.0.1366.742" timestamp="1581835694945" />
+    <state width="1343" height="177" key="GridCell.Tab.0.right" timestamp="1581835694945">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
-    <state width="1343" height="177" key="GridCell.Tab.0.right/0.0.1366.742@0.0.1366.742" timestamp="1581688312437" />
+    <state width="1343" height="177" key="GridCell.Tab.0.right/0.0.1366.742@0.0.1366.742" timestamp="1581835694945" />
     <state width="1343" height="220" key="GridCell.Tab.1.bottom" timestamp="1581000813406">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
@@ -190,9 +215,9 @@
       <screen x="0" y="0" width="1366" height="742" />
     </state>
     <state x="172" y="7" key="SettingsEditor/0.0.1366.742@0.0.1366.742" timestamp="1581083572127" />
-    <state x="339" y="198" key="com.intellij.ide.util.TipDialog" timestamp="1581687142856">
+    <state x="339" y="198" key="com.intellij.ide.util.TipDialog" timestamp="1581832452480">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
-    <state x="339" y="198" key="com.intellij.ide.util.TipDialog/0.0.1366.742@0.0.1366.742" timestamp="1581687142856" />
+    <state x="339" y="198" key="com.intellij.ide.util.TipDialog/0.0.1366.742@0.0.1366.742" timestamp="1581832452480" />
   </component>
 </project>

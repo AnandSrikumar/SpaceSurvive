@@ -1,13 +1,17 @@
 
-
-player = 'Sprites/nightraiderfixed.png'
-sample_bullet = 'Sprites/bullet.jpeg'
+s1 = 'Sprites/Playership Animations/1.png'
+s2 = 'Sprites/Playership Animations/2.png'
+s3 = 'Sprites/Playership Animations/3.png'
+s4 = 'Sprites/Playership Animations/4.png'
+s5 = 'Sprites/Playership Animations/5.png'
+player = [s1, s2, s3, s4, s5]
+bullet1 = 'Sprites/Bullets/1.png'
+bullet2 = 'Sprites/Bullets/2.png'
+bullets = [bullet1, bullet2]
 sample_bullet2 = 'Sprites/shot.png'
 
 space1 = 'Sprites/space.jpg'
-space2 = 'Sprites/space2.jpg'
-space3 = 'Sprites/space3.jpg'
-space4 = 'Sprites/space4.jpg'
+spacedark = 'Sprites/dark.png'
 dust = 'Sprites/dust.jpg'
 enemy = 'Sprites/Ship1.png'
 
@@ -19,10 +23,10 @@ ship5 = 'Sprites/Ship6.png'
 
 ships = [enemy, ship1, ship2, ship3, ship4, ship5]
 boss = 'Sprites/Ship6.png'
-blasts = ['Explosions/Explosion1/Explosion1_1.png', 'Explosions/Explosion1/Explosion1_2.png', 'Explosions/Explosion1/Explosion1_3.png', 'Explosions/Explosion1/Explosion1_4.png', 'Explosions/Explosion1/Explosion1_5.png', 'Explosions/Explosion1/Explosion1_6.png', 'Explosions/Explosion1/Explosion1_7.png', 'Explosions/Explosion1/Explosion1_8.png', 'Explosions/Explosion1/Explosion1_9.png', 'Explosions/Explosion1/Explosion1_10.png', 'Explosions/Explosion1/Explosion1_11.png']
-blasts2 = ['Explosions/Explosion2/Explosion2_1.png', 'Explosions/Explosion2/Explosion2_2.png', 'Explosions/Explosion2/Explosion2_3.png', 'Explosions/Explosion2/Explosion2_4.png', 'Explosions/Explosion2/Explosion2_5.png', 'Explosions/Explosion2/Explosion2_6.png', 'Explosions/Explosion2/Explosion2_7.png', 'Explosions/Explosion2/Explosion2_8.png', 'Explosions/Explosion2/Explosion2_9.png', 'Explosions/Explosion2/Explosion2_10.png', 'Explosions/Explosion2/Explosion2_11.png']
-blasts3 = ['Explosions/Explosion3/Explosion3_1.png', 'Explosions/Explosion3/Explosion3_2.png', 'Explosions/Explosion3/Explosion3_3.png', 'Explosions/Explosion3/Explosion3_4.png', 'Explosions/Explosion3/Explosion3_5.png', 'Explosions/Explosion3/Explosion3_6.png', 'Explosions/Explosion3/Explosion3_7.png', 'Explosions/Explosion3/Explosion3_8.png', 'Explosions/Explosion3/Explosion3_9.png', 'Explosions/Explosion3/Explosion3_10.png', 'Explosions/Explosion3/Explosion3_11.png']
-
+bl = 'Explosions/Explosion1/Explosion1_'
+blasts = [bl+str(x)+".png" for x in range(1, 12)]
+expl = 'Explosions/PlayerExplosion/'
+player_expl = [expl+"1_"+str(x)+".png" for x in range(17)]
 
 music = 'Music/fall.mp3'
 bullet_sound = 'Music/click.wav'

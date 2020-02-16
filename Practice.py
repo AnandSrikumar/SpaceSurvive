@@ -17,7 +17,7 @@ player_x, player_y = w / 2, h / 2
 player_w, player_h = 0, 0
 game_start = True
 angle = 0
-bullet_cool, cooling_time = pygame.USEREVENT + 1, 50
+bullet_cool, cooling_time = pygame.USEREVENT + 1, 100
 slope = 0
 fire = True
 dx = 0
@@ -28,7 +28,7 @@ movement_speed = 20
 background_x, background_y, background_x2, background_y2 = 0, 0, w, h
 slope_e, dx_e = 0, 0
 enemy_prepare = RandomInit(w, h)
-end_sound, end_sound_time = pygame.USEREVENT+1, 50
+end_sound, end_sound_time = pygame.USEREVENT+1, 100
 can_play_sound = True
 enemy_coming, coming_time = pygame.USEREVENT+2, 600
 invincible_event, invincible_time = pygame.USEREVENT+3, 1000
@@ -55,6 +55,13 @@ boss = False
 music_loaded = True
 music = [Sprites.music, Sprites.boss_music]
 music_index = 0
+platformer = True
+stage_x = -1500
+stage_y = -1000
+max_stage_x = 75000
+max_stage_y = 75000
+player_sprite = 0
+bullet_sprite = 0
 
 
 def event_handling():
@@ -62,7 +69,7 @@ def event_handling():
     global can_enemy_fire, can_enemy_load
     for event in pygame.event.get():
         if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_q:
+            if event.key == pygame.K_ESCAPE:
                 pygame.quit()
                 quit()
                 sys.exit()
@@ -125,36 +132,39 @@ def calc_angle():
 
 
 def draw_sprites():
-    global player_w, player_h
+    global player_w, player_h, player_sprite
     calc_angle()
-    segment = PlayerSegment(player_x, player_y, Sprites.player, angle1=angle, rotate=True)
+    segment = PlayerSegment(player_x, player_y, Sprites.player[player_sprite], angle1=angle, rotate=True)
     display_surface.blit(segment.image, segment.rect)
+    player_sprite += 1
     player_w = segment.width
     player_h = segment.height
     if invincible:
         #pygame.draw.rect(display_surface, WHITE, (player_x-player_w/2, player_y-player_h/2, player_w, player_h), 1)
         pygame.draw.circle(display_surface, RED, (int(player_x), int(player_y)), player_w//2, 1)
     #pygame.display.update(segment.rect)
+    if player_sprite == len(Sprites.player):
+        player_sprite = 0
 
 
-def draw_bullet(all_bullets):
+def draw_bullet(all_bullets, fire_bullet=Sprites.sample_bullet2, width=150, height=50, speed_x=30, speed_y=30):
     remove_list = []
-    x_speed = 30
-    y_speed = 30
+    x_speed = speed_x
+    y_speed = speed_y
     for bullets in all_bullets:
         if len(bullets) > 1:
 
-            segment2 = PlayerSegment(bullets[0], bullets[1], Sprites.sample_bullet2, rotate=True,
-                                 angle1=bullets[3], wid=150, hie=50)
+            segment2 = PlayerSegment(bullets[0], bullets[1], fire_bullet, rotate=True,
+                                 angle1=bullets[3], wid=width, hie=height)
             display_surface.blit(segment2.image, segment2.rect)
             #pygame.display.update(segment2.rect)
             y_speed = bullets[2] * x_speed
             if bullets[2] > 1:
-                y_speed = 30
+                y_speed = speed_y
                 x_speed = y_speed/bullets[2]
 
             elif bullets[2] < -1:
-                y_speed = -30
+                y_speed = -speed_y
                 x_speed = y_speed / bullets[2]
 
             if bullets[4] > 0:
@@ -177,19 +187,32 @@ def movements():
 
     elif not shift:
         movement_speed = 10
-
-    if right:
-        if player_x + player_w/2 < w:
-            player_x += movement_speed
-    if left:
-        if player_x - player_w/2 > 0:
-            player_x -= movement_speed
-    if up:
-        if player_y - player_h/2 > 0:
-            player_y -= movement_speed
-    if down:
-        if player_y + player_h/2 < h:
-            player_y += movement_speed
+    if not platformer:
+        if right:
+            if player_x + player_w/2 < w:
+                player_x += movement_speed
+        if left:
+            if player_x - player_w/2 > 0:
+                player_x -= movement_speed
+        if up:
+            if player_y - player_h/2 > 0:
+                player_y -= movement_speed
+        if down:
+            if player_y + player_h/2 < h:
+                player_y += movement_speed
+    else:
+        if right:
+            if player_x + player_w/2 < w*0.75:
+                player_x += movement_speed
+        if left:
+            if player_x - player_w/2 > w*0.25:
+                player_x -= movement_speed
+        if up:
+            if player_y - player_h/2 > h*0.25:
+                player_y -= movement_speed
+        if down:
+            if player_y + player_h/2 < h*0.75:
+                player_y += movement_speed
 
 
 def controls(key):
@@ -233,16 +256,13 @@ def controls_released(key):
 
 
 def draw_background():
-    space1 = Background(background_x, background_y, Sprites.space1, wid=w, hie=h)
-    #space2 = Background(background_x2, background_y, Sprites.space1, wid=w, hie=w)
-    #space3 = Background(background_x, background_y2, Sprites.space1, wid=w, hie=h)
-    #space4 = Background(background_x2, background_y2, Sprites.space1, wid=w, hie=w)
-    display_surface.blit(space1.image, space1.rect)
-    #display_surface.blit(space2.image, space2.rect)
-    #display_surface.blit(space3.image, space3.rect)
-    #display_surface.blit(space4.image, space4.rect)
+    if platformer:
+        space1 = Background(background_x, background_y, Sprites.spacedark, wid=w, hie=w)
+        display_surface.blit(space1.image, space1.rect)
 
-    #pygame.display.update([space1])
+    else:
+        space1 = Background(background_x, background_y, Sprites.spacedark, wid=w, hie=h)
+        display_surface.blit(space1.image, space1.rect)
 
 
 def move_background():
@@ -250,39 +270,34 @@ def move_background():
 
     if player_x + player_w/2 >= w*0.7 and right:
         background_x -= movement_speed
-        background_x2 -= movement_speed
 
     if player_x - player_w/2 <= w*0.25 and left:
         background_x += movement_speed
-        background_x2 += movement_speed
 
     if player_y + player_h/2 >= 0.7*h and down:
         background_y -= movement_speed
-        background_y2 -= movement_speed
 
-    if player_y - player_h/2 <= h*0.25:
+    if player_y - player_h/2 <= h*0.25 and up:
         background_y += movement_speed
-        background_y2 += movement_speed
 
     if background_x < -w:
         background_x = w
-    if background_x2 < -w:
-        background_x2 = w
 
     if background_x > w:
         background_x = -w
-    if background_x2 > w:
-        background_x2 = -w
 
-    if background_y2 < -h:
-        background_y2 = h
     if background_y < -h:
         background_y = h
 
-    if background_y2 > h:
-        background_y2 = -h
     if background_y > h:
         background_y = -h
+
+
+def drawing_enemy():
+    if platformer:
+        draw_enemy_platform()
+    else:
+        draw_enemy()
 
 
 def draw_enemy():
@@ -342,17 +357,21 @@ def draw_enemy():
         enemy_list.remove(rem)
 
 
+def draw_enemy_platform():
+    pass
+
+
 def collision_detection_bullet(en_rect, e_list):
     global bullet_list, score, explosions
     for bullet in bullet_list:
         bul_rect = pygame.Rect(bullet[0]-bul_wid/6, bullet[1]-bul_hie/6, bul_wid/6, bul_hie/6)
         if type(bul_rect) == pygame.Rect and bul_rect.colliderect(en_rect):
-            e_list[6] -= 10
+            e_list[6] -= 25
             bullet[0] = -2000
             pygame.draw.circle(display_surface, RED, (en_rect[0]+en_rect[2]//2, en_rect[1]+en_rect[3]//2), en_rect[2]//2, 1)
 
     if e_list[6] < 0:
-        explosions.append([en_rect[0], en_rect[1], 0, 125])
+        explosions.append([en_rect[0], en_rect[1], 0, 125, Sprites.blasts])
         play_sound(Sprites.explosion_sound)
         e_list[0] = -200
         e_list[2] = 0
@@ -386,14 +405,16 @@ def collision_detection(enemy_rect):
 
 
 def draw_obstacles():
-    pass
+    if not platformer:
+        return
 
 
 def check_for_player_health():
-    global player_x
+    global player_x, player_health
     if player_health < 0:
+
         if not game_fin:
-            explosions.append([player_x, player_y, 0, 125])
+            explosions.append([player_x, player_y, 0, 125, Sprites.player_expl])
             play_sound(Sprites.explosion_sound2)
         player_x = -2000
         stop_game()
@@ -405,8 +426,8 @@ def draw_explosions():
     rem = []
     for explosion in explosions:
 
-        exp = PlayerSegment(explosion[0], explosion[1], Sprites.blasts[explosion[2]], wid=200, hie=200)
-        if explosion[2] < len(Sprites.blasts)-1:
+        exp = PlayerSegment(explosion[0], explosion[1], explosion[4][explosion[2]], wid=200, hie=200)
+        if explosion[2] < len(explosion[4])-1:
             explosion[2] += 1
         explosion[3] -= 1
         display_surface.blit(exp.image, exp.rect)
@@ -528,6 +549,13 @@ def draw_score():
     write_text("SCORE: "+str(score), 20, h-20)
 
 
+def update_bullet_sprite():
+    global bullet_sprite
+    bullet_sprite += 1
+    if bullet_sprite >= len(Sprites.bullets):
+        bullet_sprite = 0
+
+
 def run_the_game():
     global music_loaded
     display_surface.fill((0, 0, 0))
@@ -536,22 +564,24 @@ def run_the_game():
     controls(keys)
     controls_released(keys)
     draw_background()
-    draw_enemy()
+    drawing_enemy()
     play_music()
     if music_loaded:
         music_loaded = False
     movements()
     draw_sprites()
     prepare_to_fire()
-    draw_bullet(bullet_list)
-    draw_bullet(enemy_bullets)
+    draw_bullet(bullet_list, Sprites.bullets[bullet_sprite], 30, 30, speed_x=100, speed_y=100)
+    update_bullet_sprite()
+    draw_bullet(enemy_bullets, speed_x=60, speed_y=60)
     draw_player_health()
     draw_score()
     draw_explosions()
     check_for_player_health()
     collision_detection_player()
     check_boss()
-    #move_background()
+    if platformer:
+        move_background()
     pygame.display.update()
     clock.tick(30)
 
