@@ -51,5 +51,5 @@ class RandomInit:
         enem_points[4] = dire
 
     def give_random(self, e_list):
-        return random.rangerange(0, len(e_list))
+        return random.randrange(0, len(e_list))
 

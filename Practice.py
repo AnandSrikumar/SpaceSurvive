@@ -5,6 +5,7 @@ from Segments import PlayerSegment
 from Segments import Background
 from EnemyRandom import RandomInit
 import sys
+import Obstacles
 
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
@@ -54,7 +55,7 @@ enemy_bullets = []
 boss = False
 music_loaded = True
 music = [Sprites.music, Sprites.boss_music]
-music_index = 0
+song_no = 0
 platformer = False
 stage_x = -1500
 stage_y = -1000
@@ -62,6 +63,22 @@ max_stage_x = 75000
 max_stage_y = 75000
 player_sprite = 0
 bullet_sprite = 0
+pick_ups = []
+obstacles = []
+enems = []
+initialized = False
+can_scroll = True
+can_scroll_y = True
+
+
+def platform_initialize():
+    if not platformer:
+        return
+    global pick_ups, obstacles, initialized
+    if initialized:
+        return
+    pick_ups = Obstacles.give_picks()
+    initialized = True
 
 
 def event_handling():
@@ -266,19 +283,24 @@ def draw_background():
 
 
 def move_background():
-    global background_x, background_y, background_x2, background_y2
+    global background_x, background_y, background_x2, background_y2, stage_x, stage_y, can_scroll, can_scroll_y
+    global player_x, player_y
 
-    if player_x + player_w/2 >= w*0.7 and right:
+    if player_x + player_w/2 >= w*0.7 and right and can_scroll:
         background_x -= movement_speed
+        stage_x -= movement_speed
 
-    if player_x - player_w/2 <= w*0.25 and left:
+    if player_x - player_w/2 <= w*0.25 and left and can_scroll:
         background_x += movement_speed
+        stage_x += movement_speed
 
-    if player_y + player_h/2 >= 0.7*h and down:
+    if player_y + player_h/2 >= 0.7*h and down and can_scroll_y:
         background_y -= movement_speed
+        stage_y -= movement_speed
 
-    if player_y - player_h/2 <= h*0.25 and up:
+    if player_y - player_h/2 <= h*0.25 and up and can_scroll_y:
         background_y += movement_speed
+        stage_y += movement_speed
 
     if background_x < -w:
         background_x = w
@@ -291,6 +313,42 @@ def move_background():
 
     if background_y > h:
         background_y = -h
+
+    if not can_scroll:
+        if stage_x > 0 and right:
+            stage_x -= movement_speed
+
+        if left and player_x-player_w/2 > 0:
+            player_x -= movement_speed
+
+        if left and stage_x+max_stage_x <= w/4:
+            stage_x += movement_speed
+
+        if right and player_x+player_w/2 < w:
+            player_x += movement_speed
+
+    if not can_scroll_y:
+        if stage_y > 0 and down:
+            stage_y -= movement_speed
+
+        if up and player_y - player_h/2>0:
+            player_y -= movement_speed
+
+        if up and stage_y+max_stage_y <= h/4:
+            stage_y += movement_speed
+
+        if down and player_y + player_h/2 < h:
+            player_y += movement_speed
+
+    if stage_x+max_stage_x <= w/4 or stage_x > 0:
+        can_scroll = False
+    else:
+        can_scroll = True
+
+    if stage_y+max_stage_y <= h/4 or stage_y > 0:
+        can_scroll_y = False
+    else:
+        can_scroll_y = True
 
 
 def drawing_enemy():
@@ -324,7 +382,7 @@ def draw_enemy():
             boss = True
             e_list = enemy_prepare.get_random_enemy(player_x, player_y, 1)
             enemy_list.append(e_list)
-            music_loaded = True
+            #music_loaded = True
             music_index = 1
 
     if boss:
@@ -334,19 +392,27 @@ def draw_enemy():
                 player_health = 100
             else:
                 player_health += 60
-            music_loaded = True
+            #music_loaded = True
             music_index = 0
 
     if len(enemy_list) == enem_len and can_enemy_add:
         can_enemy_add = False
 
+    loop_enemy()
+
+
+def loop_enemy():
+    global enemy_list
+    rem_list = []
     for enem_list in enemy_list:
         angle_e = calculate_player_pos(enem_list[0], enem_list[1])
         enem_seg = PlayerSegment(angle_e[1], angle_e[2], Sprites.ships[enem_list[5]], angle1=angle_e[0], rotate=True, wid=enem_list[8], hie=enem_list[9])
         display_surface.blit(enem_seg.image, enem_seg.rect)
         #pygame.display.update(enem_seg.rect)
         move_enemy(enem_list)
-        if boss:
+        if boss and not platformer:
+            load_enemy_bullet(angle_e[1], angle_e[2], angle_e[0], enem_list[2], player_x, enem_list[0])
+        elif platformer:
             load_enemy_bullet(angle_e[1], angle_e[2], angle_e[0], enem_list[2], player_x, enem_list[0])
         collision_detection(enem_seg.rect)
         collision_detection_bullet(enem_seg.rect, enem_list)
@@ -384,7 +450,8 @@ def collision_detection_player():
     player_rect = pygame.Rect(player_x-player_w*0.75, player_y-player_h*0.75, player_w*0.75, player_h*0.75)
     for bull in enemy_bullets:
         bul_rect = pygame.Rect(bull[0]-bul_wid/4, bull[1]-bul_hie/4, bul_wid/4, bul_hie/4)
-        if bul_rect.colliderect(player_rect):
+        if bul_rect.colliderect(player_rect) and not invincible:
+            play_sound(Sprites.collision2)
             player_health -= 5
             bull[0] = -2000
             pygame.draw.circle(display_surface, RED, (int(player_x), int(player_y)), player_w//2, 1)
@@ -399,14 +466,29 @@ def collision_detection(enemy_rect):
     player_rect = pygame.Rect(player_x-10, player_y-10, 10, 10)
     if enemy_rect.colliderect(player_rect):
         if not invincible:
+            play_sound(Sprites.collision)
             player_health -= 15
             pygame.time.set_timer(invincible_event, invincible_time)
             invincible = True
 
 
-def draw_obstacles():
+def draw_obstacles(all_obstacles):
     if not platformer:
         return
+    for obstacle in all_obstacles:
+        if 0 <= obstacle[0]+stage_x <= w and 0 <= obstacle[1]+stage_y <= h:
+            segment = PlayerSegment(obstacle[0]+stage_x, obstacle[1]+stage_y, Sprites.protons[obstacle[2]])
+            display_surface.blit(segment.image, segment.rect)
+            obstacle[2] += 1
+            if obstacle[2] == len(Sprites.protons):
+                obstacle[2] = 0
+            collision_with_obstacles(segment.rect)
+    write_text(str(stage_x)+","+str(stage_y), w/2, h-140)
+    write_text(str(all_obstacles[0][0])+","+str(all_obstacles[0][1]), w/2, h-100)
+
+
+def collision_with_obstacles(obs_rec):
+    pass
 
 
 def check_for_player_health():
@@ -529,10 +611,12 @@ def reset():
 
 
 def play_music():
+    global music_loaded
     if music_loaded:
-        pygame.mixer.music.load(music[music_index])
-        pygame.mixer.music.play(-1)
+        pygame.mixer.music.load(Sprites.songs[song_no])
+        pygame.mixer.music.play()
         pygame.mixer.music.set_volume(0.3)
+    write_text("Song: " + Sprites.songs[song_no][12:-4], w / 2 + 100, h - 20)
 
 
 def play_sound(sound):
@@ -557,14 +641,18 @@ def update_bullet_sprite():
 
 
 def run_the_game():
-    global music_loaded
+    global music_loaded, song_no
     display_surface.fill((0, 0, 0))
     keys = pygame.key.get_pressed()
     event_handling()
     controls(keys)
     controls_released(keys)
     draw_background()
+    platform_initialize()
     drawing_enemy()
+    if pygame.mixer.music.get_busy() == 0:
+        song_no = enemy_prepare.give_random(Sprites.songs)
+        music_loaded = True
     play_music()
     if music_loaded:
         music_loaded = False
@@ -580,6 +668,7 @@ def run_the_game():
     check_for_player_health()
     collision_detection_player()
     check_boss()
+    draw_obstacles(pick_ups)
     if platformer:
         move_background()
     pygame.display.update()

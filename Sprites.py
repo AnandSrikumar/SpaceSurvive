@@ -27,13 +27,19 @@ bl = 'Explosions/Explosion1/Explosion1_'
 blasts = [bl+str(x)+".png" for x in range(1, 12)]
 expl = 'Explosions/PlayerExplosion/'
 player_expl = [expl+"1_"+str(x)+".png" for x in range(17)]
+star = 'Sprites/Proton Star/p_Sprite_'
+protons = [star+str(x)+".png" for x in range(17)]
+single_proton = 'Sprites/Proton Star/p_Sprite_1.png'
 
 music = 'Music/fall.mp3'
+songs = ['Music/Songs/closer.mp3', 'Music/Songs/rumors.mp3', 'Music/Songs/life.mp3', 'Music/Songs/starsky.mp3',
+         'Music/Songs/crown.mp3']
 bullet_sound = 'Music/click.wav'
 explosion_sound = 'Music/explosion.wav'
 explosion_sound2 = 'Music/explosion2.wav'
 boss_music = 'Music/Boss.mp3'
-
+collision = 'Music/collide.wav'
+collision2 = 'Music/collide2.wav'
 
 
 

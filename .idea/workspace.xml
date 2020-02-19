@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4fd71d5d-8512-4159-841a-8acb385ce63d" name="Default Changelist" comment="" />
+    <list default="true" id="4fd71d5d-8512-4159-841a-8acb385ce63d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Music/Songs/closer.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music/Songs/crown.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music/Songs/life.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music/Songs/rumors.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music/Songs/starsky.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music/collide.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music/collide2.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprites/Proton Star/p_Sprite_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprites/Proton Star/p_Sprite_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprites/Proton Star/p_Sprite_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprites/Proton Star/p_Sprite_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprites/Proton Star/p_Sprite_12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprites/Proton Star/p_Sprite_13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprites/Proton Star/p_Sprite_14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprites/Proton Star/p_Sprite_15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprites/Proton Star/p_Sprite_16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprites/Proton Star/p_Sprite_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprites/Proton Star/p_Sprite_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprites/Proton Star/p_Sprite_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprites/Proton Star/p_Sprite_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprites/Proton Star/p_Sprite_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprites/Proton Star/p_Sprite_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprites/Proton Star/p_Sprite_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprites/Proton Star/p_Sprite_9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnemyRandom.py" beforeDir="false" afterPath="$PROJECT_DIR$/EnemyRandom.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Obstacles.py" beforeDir="false" afterPath="$PROJECT_DIR$/Obstacles.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/Practice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sprites.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +56,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Sprites/Bullets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Sprites" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -36,11 +66,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Sprites/Bullets" />
       <recent name="$PROJECT_DIR$/Sprites" />
+      <recent name="$PROJECT_DIR$/Music" />
+      <recent name="$PROJECT_DIR$/Sprites/Bullets" />
       <recent name="$PROJECT_DIR$/Explosions/PlayerExplosion" />
       <recent name="$PROJECT_DIR$/Sprites/Playership Animations" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Python.Practice">
@@ -78,6 +108,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Fractions.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Obstacles" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SpaceSurvive" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Obstacles.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -131,6 +182,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.Practice" />
+        <item itemvalue="Python.Obstacles" />
         <item itemvalue="Python.EnemyRandom" />
         <item itemvalue="Python.Sprites" />
         <item itemvalue="Python.Fractions" />
@@ -159,6 +211,10 @@
       <screen x="0" y="0" width="1366" height="742" />
     </state>
     <state x="389" y="177" width="738" height="387" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.742@0.0.1366.742" timestamp="1581341820348" />
+    <state x="366" y="109" width="628" height="523" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1581950873581">
+      <screen x="0" y="0" width="1366" height="742" />
+    </state>
+    <state x="366" y="109" width="628" height="523" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.742@0.0.1366.742" timestamp="1581950873581" />
     <state x="427" y="115" width="505" height="510" key="FileChooserDialogImpl" timestamp="1581718261059">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
@@ -167,22 +223,22 @@
       <screen x="0" y="0" width="1366" height="742" />
     </state>
     <state x="472" y="289" key="Github.CreateGistDialog/0.0.1366.742@0.0.1366.742" timestamp="1581697752936" />
-    <state width="1343" height="177" key="GridCell.Tab.0.bottom" timestamp="1581850152148">
+    <state width="1343" height="177" key="GridCell.Tab.0.bottom" timestamp="1582128192654">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
-    <state width="1343" height="177" key="GridCell.Tab.0.bottom/0.0.1366.742@0.0.1366.742" timestamp="1581850152148" />
-    <state width="1343" height="177" key="GridCell.Tab.0.center" timestamp="1581850152147">
+    <state width="1343" height="177" key="GridCell.Tab.0.bottom/0.0.1366.742@0.0.1366.742" timestamp="1582128192654" />
+    <state width="1343" height="177" key="GridCell.Tab.0.center" timestamp="1582128192653">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
-    <state width="1343" height="177" key="GridCell.Tab.0.center/0.0.1366.742@0.0.1366.742" timestamp="1581850152147" />
-    <state width="1343" height="177" key="GridCell.Tab.0.left" timestamp="1581850152147">
+    <state width="1343" height="177" key="GridCell.Tab.0.center/0.0.1366.742@0.0.1366.742" timestamp="1582128192653" />
+    <state width="1343" height="177" key="GridCell.Tab.0.left" timestamp="1582128192653">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
-    <state width="1343" height="177" key="GridCell.Tab.0.left/0.0.1366.742@0.0.1366.742" timestamp="1581850152147" />
-    <state width="1343" height="177" key="GridCell.Tab.0.right" timestamp="1581850152147">
+    <state width="1343" height="177" key="GridCell.Tab.0.left/0.0.1366.742@0.0.1366.742" timestamp="1582128192653" />
+    <state width="1343" height="177" key="GridCell.Tab.0.right" timestamp="1582128192654">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
-    <state width="1343" height="177" key="GridCell.Tab.0.right/0.0.1366.742@0.0.1366.742" timestamp="1581850152147" />
+    <state width="1343" height="177" key="GridCell.Tab.0.right/0.0.1366.742@0.0.1366.742" timestamp="1582128192654" />
     <state width="1343" height="220" key="GridCell.Tab.1.bottom" timestamp="1581000813406">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
@@ -203,9 +259,9 @@
       <screen x="0" y="0" width="1366" height="742" />
     </state>
     <state x="172" y="7" key="SettingsEditor/0.0.1366.742@0.0.1366.742" timestamp="1581083572127" />
-    <state x="339" y="198" key="com.intellij.ide.util.TipDialog" timestamp="1581849208109">
+    <state x="339" y="198" key="com.intellij.ide.util.TipDialog" timestamp="1582126631551">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
-    <state x="339" y="198" key="com.intellij.ide.util.TipDialog/0.0.1366.742@0.0.1366.742" timestamp="1581849208109" />
+    <state x="339" y="198" key="com.intellij.ide.util.TipDialog/0.0.1366.742@0.0.1366.742" timestamp="1582126631551" />
   </component>
 </project>
