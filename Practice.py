@@ -437,7 +437,7 @@ def collision_detection_bullet(en_rect, e_list):
             pygame.draw.circle(display_surface, RED, (en_rect[0]+en_rect[2]//2, en_rect[1]+en_rect[3]//2), en_rect[2]//2, 1)
 
     if e_list[6] < 0:
-        explosions.append([en_rect[0], en_rect[1], 0, 125, Sprites.blasts])
+        explosions.append([en_rect[0], en_rect[1], 0, 10, Sprites.blasts])
         play_sound(Sprites.explosion_sound)
         e_list[0] = -200
         e_list[2] = 0
@@ -483,6 +483,7 @@ def draw_obstacles(all_obstacles):
             if obstacle[2] == len(Sprites.protons):
                 obstacle[2] = 0
             collision_with_obstacles(segment.rect)
+    item_p = [all_obstacles[0][0], all_obstacles[0][1]]
     write_text(str(stage_x)+","+str(stage_y), w/2, h-140)
     write_text(str(all_obstacles[0][0])+","+str(all_obstacles[0][1]), w/2, h-100)
 

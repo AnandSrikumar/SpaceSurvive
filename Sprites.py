@@ -14,6 +14,7 @@ space1 = 'Sprites/space.jpg'
 spacedark = 'Sprites/dark.png'
 dust = 'Sprites/dust.jpg'
 enemy = 'Sprites/Ship1.png'
+arrow = 'Sprites/arrow.png'
 
 ship1 = 'Sprites/Ship2.png'
 ship2 = 'Sprites/Ship3.png'
