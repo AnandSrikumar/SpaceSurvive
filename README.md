@@ -10,7 +10,7 @@ Use mouse to aim enemies, left click on mouse to shoot bullets and kill enemies.
 Use WASD to move the player in any direction, use shift key to move player fastly.
 
 Credits:
-Song used : After the fall purple planet
+Songs used : Updated songs with neffex and Two steps from Hell
 
 Note:
 This game is under development, that is why 2-3 files are present but unused, they will; be used in future.
