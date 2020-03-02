@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fd71d5d-8512-4159-841a-8acb385ce63d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Sprites/arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music/Songs/best of me.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprites/boss_ship.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprites/pointing.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnemyRandom.py" beforeDir="false" afterPath="$PROJECT_DIR$/EnemyRandom.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Obstacles.py" beforeDir="false" afterPath="$PROJECT_DIR$/Obstacles.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/Practice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/RunGame.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sprites.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sprites.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/arrow.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,16 +36,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Sprites" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Music/Songs" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Music/Songs" />
       <recent name="$PROJECT_DIR$/Sprites" />
       <recent name="$PROJECT_DIR$/Music" />
       <recent name="$PROJECT_DIR$/Sprites/Bullets" />
       <recent name="$PROJECT_DIR$/Explosions/PlayerExplosion" />
-      <recent name="$PROJECT_DIR$/Sprites/Playership Animations" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Sprites" />
@@ -49,7 +53,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Practice">
+  <component name="RunManager" selected="Python.RunGame">
     <configuration name="EnemyRandom" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SpaceSurvive" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -113,7 +117,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Practice" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="RunGame" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SpaceSurvive" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -125,7 +129,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Practice.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RunGame.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -157,7 +161,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Practice" />
+        <item itemvalue="Python.RunGame" />
         <item itemvalue="Python.Obstacles" />
         <item itemvalue="Python.EnemyRandom" />
         <item itemvalue="Python.Sprites" />
@@ -199,22 +203,22 @@
       <screen x="0" y="0" width="1366" height="742" />
     </state>
     <state x="472" y="289" key="Github.CreateGistDialog/0.0.1366.742@0.0.1366.742" timestamp="1581697752936" />
-    <state width="1343" height="177" key="GridCell.Tab.0.bottom" timestamp="1582631927997">
+    <state width="1343" height="177" key="GridCell.Tab.0.bottom" timestamp="1583153675982">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
-    <state width="1343" height="177" key="GridCell.Tab.0.bottom/0.0.1366.742@0.0.1366.742" timestamp="1582631927997" />
-    <state width="1343" height="177" key="GridCell.Tab.0.center" timestamp="1582631927996">
+    <state width="1343" height="177" key="GridCell.Tab.0.bottom/0.0.1366.742@0.0.1366.742" timestamp="1583153675982" />
+    <state width="1343" height="177" key="GridCell.Tab.0.center" timestamp="1583153675982">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
-    <state width="1343" height="177" key="GridCell.Tab.0.center/0.0.1366.742@0.0.1366.742" timestamp="1582631927996" />
-    <state width="1343" height="177" key="GridCell.Tab.0.left" timestamp="1582631927996">
+    <state width="1343" height="177" key="GridCell.Tab.0.center/0.0.1366.742@0.0.1366.742" timestamp="1583153675982" />
+    <state width="1343" height="177" key="GridCell.Tab.0.left" timestamp="1583153675982">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
-    <state width="1343" height="177" key="GridCell.Tab.0.left/0.0.1366.742@0.0.1366.742" timestamp="1582631927996" />
-    <state width="1343" height="177" key="GridCell.Tab.0.right" timestamp="1582631927997">
+    <state width="1343" height="177" key="GridCell.Tab.0.left/0.0.1366.742@0.0.1366.742" timestamp="1583153675982" />
+    <state width="1343" height="177" key="GridCell.Tab.0.right" timestamp="1583153675982">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
-    <state width="1343" height="177" key="GridCell.Tab.0.right/0.0.1366.742@0.0.1366.742" timestamp="1582631927997" />
+    <state width="1343" height="177" key="GridCell.Tab.0.right/0.0.1366.742@0.0.1366.742" timestamp="1583153675982" />
     <state width="1343" height="220" key="GridCell.Tab.1.bottom" timestamp="1582136510897">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
@@ -235,9 +239,9 @@
       <screen x="0" y="0" width="1366" height="742" />
     </state>
     <state x="172" y="7" key="SettingsEditor/0.0.1366.742@0.0.1366.742" timestamp="1581083572127" />
-    <state x="339" y="198" key="com.intellij.ide.util.TipDialog" timestamp="1582631645977">
+    <state x="339" y="198" key="com.intellij.ide.util.TipDialog" timestamp="1583151698720">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
-    <state x="339" y="198" key="com.intellij.ide.util.TipDialog/0.0.1366.742@0.0.1366.742" timestamp="1582631645977" />
+    <state x="339" y="198" key="com.intellij.ide.util.TipDialog/0.0.1366.742@0.0.1366.742" timestamp="1583151698720" />
   </component>
 </project>

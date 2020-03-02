@@ -14,15 +14,16 @@ space1 = 'Sprites/space.jpg'
 spacedark = 'Sprites/dark.png'
 dust = 'Sprites/dust.jpg'
 enemy = 'Sprites/Ship1.png'
-arrow = 'Sprites/arrow.png'
+arrow = 'Sprites/pointing.png'
 
 ship1 = 'Sprites/Ship2.png'
 ship2 = 'Sprites/Ship3.png'
 ship3 = 'Sprites/Ship4.png'
 ship4 = 'Sprites/Ship5.png'
 ship5 = 'Sprites/Ship6.png'
+boss_ship = 'Sprites/boss_ship.png'
 
-ships = [enemy, ship1, ship2, ship3, ship4, ship5]
+ships = [enemy, ship1, ship2, ship3, ship4, ship5, boss_ship]
 boss = 'Sprites/Ship6.png'
 bl = 'Explosions/Explosion1/Explosion1_'
 blasts = [bl+str(x)+".png" for x in range(1, 12)]
@@ -32,10 +33,11 @@ star = 'Sprites/Proton Star/p_Sprite_'
 protons = [star+str(x)+".png" for x in range(17)]
 single_proton = 'Sprites/Proton Star/p_Sprite_1.png'
 
+
 music = 'Music/fall.mp3'
 songs = ['Music/Songs/closer.mp3', 'Music/Songs/rumors.mp3', 'Music/Songs/life.mp3', 'Music/Songs/starsky.mp3',
-         'Music/Songs/crown.mp3']
-bullet_sound = 'Music/click.wav'
+         'Music/Songs/crown.mp3', 'Music/Songs/best of me.mp3']
+bullet_sound = 'Music/bullet.wav'
 explosion_sound = 'Music/explosion.wav'
 explosion_sound2 = 'Music/explosion2.wav'
 boss_music = 'Music/Boss.mp3'

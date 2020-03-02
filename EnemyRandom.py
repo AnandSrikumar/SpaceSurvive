@@ -42,6 +42,13 @@ class RandomInit:
             return [enem_points[0], enem_points[1], slope, 30, dire, boss, 1000, 700, 250, 250]
         return [enem_points[0], enem_points[1], slope, speed, dire, sprite, health[sprite], scores[sprite], 80, 80]
 
+    def get_platformer_enemy(self, enem_points, player_points, sprite):
+        slope = (enem_points[1] - player_points[1])/(enem_points[0] - player_points[0])
+        dire = 1
+        if enem_points[0] > player_points[0]:
+            dire = -1
+        return [enem_points[0], enem_points[1], slope, 30, dire, sprite, 1000, 700, 250, 250]
+
     def renew_pos(self, enem_points, player_points):
         slope = (enem_points[1] - player_points[1]) / (enem_points[0] - player_points[0])
         enem_points[2] = slope
