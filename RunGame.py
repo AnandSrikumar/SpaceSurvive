@@ -59,8 +59,8 @@ song_no = 0
 platformer = False
 stage_x = -1500
 stage_y = -1000
-max_stage_x = 75000
-max_stage_y = 75000
+max_stage_x = 20000
+max_stage_y = 20000
 player_sprite = 0
 bullet_sprite = 0
 pick_ups = []
@@ -75,6 +75,9 @@ enemy_appeared = False
 level = 1
 total_collects = [15, 25, 30]
 to_collect = total_collects[level-1]
+bounds = False
+level_begins = [[-1500, -1000]]
+level_totals = [[20000, 20000]]
 
 
 def platform_initialize():
@@ -83,7 +86,7 @@ def platform_initialize():
     global pick_ups, obstacles, initialized
     if initialized:
         return
-    pick_ups = Obstacles.give_picks()
+    pick_ups = Obstacles.give_picks(max_stage_x, max_stage_y)
     initialized = True
 
 
@@ -406,7 +409,7 @@ def draw_enemy():
 
 
 def loop_enemy(enemy_list):
-    global enemy_appeared, pick_ups
+    global enemy_appeared, pick_ups, bounds
     rem_list = []
     for enem_list in enemy_list:
         angle_e = calculate_player_pos(enem_list[0], enem_list[1])
@@ -417,20 +420,21 @@ def loop_enemy(enemy_list):
         move_enemy(enem_list)
         if boss and not platformer:
             load_enemy_bullet(angle_e[1], angle_e[2], angle_e[0], enem_list[2], player_x, enem_list[0])
-        elif platformer:
+        elif platformer and enemy_appeared:
             load_enemy_bullet(angle_e[1], angle_e[2], angle_e[0], enem_list[2], player_x, enem_list[0])
         collision_detection(enem_seg.rect)
         collision_detection_bullet(enem_seg.rect, enem_list)
         if enem_list[0] < -100:
             rem_list.append(enem_list)
-            if platformer:
-                protons.append([angle_e[1]-stage_x, angle_e[1]-stage_y, 0])
 
     for rem in rem_list:
         enemy_list.remove(rem)
         if platformer:
+            bounds = False
             del pick_ups[0]
             enemy_bullets.clear()
+            if enemy_appeared:
+                protons.append([player_x + player_w + 120 - stage_x, player_y - stage_y, 0])
             enemy_appeared = False
             break
 
@@ -493,7 +497,7 @@ def collision_detection(enemy_rect):
 
 
 def draw_obstacles(all_obstacles, is_boss=False, sprite=Sprites.protons, obs_type="protons"):
-    global enemy_index, enemy_appeared
+    global enemy_appeared, bounds
     if not platformer:
         return
     if not is_boss:
@@ -513,17 +517,24 @@ def draw_obstacles(all_obstacles, is_boss=False, sprite=Sprites.protons, obs_typ
         bounds = in_screen(all_obstacles[0][0] + stage_x, all_obstacles[0][1] + stage_y)
         if bounds or enemy_appeared:
             drawing_enemy(boss_ship=True)
-            if not enemy_appeared:
-                enemy_appeared = True
-        #write_text(str(stage_x) + "," + str(stage_y), w / 2, h - 140)
-        #write_text(str(all_obstacles[enemy_index][0]) + "," + str(all_obstacles[enemy_index][1]), w / 2, h - 100)
+        write_text(str(stage_x) + "," + str(stage_y), w / 2, h - 140)
+        write_text(str(all_obstacles[0][0]) + "," + str(all_obstacles[0][1]), w / 2, h - 100)
         p = PlayerSegment(player_x, player_y - 100, Sprites.arrow, rotate=True, angle1=dirs[1], wid=40, hie=40)
         display_surface.blit(p.image, p.rect)
     write_text("collected: "+str(to_collect)+"/"+str(total_collects[level-1]), w-150, h-30)
 
 
+def distance(x_obs, y_obs):
+    dx = (stage_x + x_obs) - stage_x
+    dy = (y_obs + stage_y) - stage_y
+    dis = math.sqrt(dx**2 + dy**2)
+    return dis
+
+
 def in_screen(object_x, object_y):
+    global enemy_appeared
     if 0 <= object_x <= w and 0 <= object_y <= h:
+        enemy_appeared = True
         return True
     return False
 
@@ -619,7 +630,7 @@ def check_boss():
 
 def game_over():
     if game_fin:
-        write_text("GAME OVER, WANT TO CONTINUE? Y or N", w / 2 - 60, h / 2, size=18)
+        write_text("GAME OVER, WANT TO PLAY AGAIN? Y or N", w / 2 - 120, h / 2, size=18)
         if pygame.key.get_pressed()[pygame.K_n]:
             pygame.quit()
             quit()
@@ -638,8 +649,9 @@ def write_text(text, x, y, font_name='freesansbold.ttf', size=14, color=(255, 25
 
 def reset():
     global player_x, player_y, player_health, can_enemy_add, can_enemy_come
-    global enemy_list, invincible, game_fin, bullet_list
-    global mouse_pressed, right, left, up, down, shift, fire, score, levels, curr_level
+    global enemy_list, invincible, game_fin, bullet_list, game_start, stage_x, stage_y, protons, to_collect
+    global mouse_pressed, right, left, up, down, shift, fire, score, levels, curr_level, loop_list
+    global max_stage_x, max_stage_y, pick_ups, enemy_bullets
     mouse_pressed = False
     right, left, up, down, shift = False, False, False, False, False
     fire = True
@@ -655,6 +667,16 @@ def reset():
     score = 0
     levels = [[5, 4], [8, 5], [10, 7]]
     curr_level = 0
+    game_start = False
+    protons = []
+    to_collect = total_collects[level-1]
+    stage_x = level_begins[level-1][0]
+    stage_y = level_begins[level-1][1]
+    max_stage_x = level_totals[level-1][0]
+    max_stage_y = level_totals[level-1][1]
+    pick_ups = Obstacles.give_picks(max_stage_x, max_stage_y)
+    loop_list = []
+    enemy_bullets = []
 
 
 def play_music():
